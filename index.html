@@ -12,83 +12,177 @@ body{
     text-align:center;
 }
 
-/* JUDUL */
-h1{
+/* ================= NAVBAR ================= */
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:#000;
+    padding:15px;
+    box-shadow:0 0 25px lime;
+}
+
+nav a{
     color:lime;
-    margin-top:60px;
+    margin:20px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover{
     text-shadow:0 0 20px lime;
 }
 
-/* TIKTOK */
-.tiktok{
-    margin-top:20px;
+/* ================= JUDUL ================= */
+h1{
+    margin-top:140px;
+    color:lime;
+    text-shadow:0 0 25px lime;
+    animation: neon 1.5s infinite alternate;
+}
+
+@keyframes neon{
+    from{ text-shadow:0 0 10px lime; }
+    to{ text-shadow:0 0 35px lime; }
+}
+
+/* ================= ICON ================= */
+.social img{
+    width:55px;
+    margin:15px;
+    transition:0.3s;
+}
+
+.social img:hover{
+    transform:scale(1.2);
+}
+
+/* ================= BOX ================= */
+.box{
+    margin:60px auto;
+    width:85%;
+    max-width:650px;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    transition:0.4s;
+}
+
+.box:hover{
+    transform:scale(1.02);
+}
+
+/* ================= API GERAK ================= */
+.api{
+    background:linear-gradient(180deg,#300000,#ff0000);
+    box-shadow:0 0 40px red;
+    position:relative;
+    overflow:hidden;
+}
+
+.api::before{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:radial-gradient(circle,rgba(255,120,0,0.7),transparent 70%);
+    animation: flame 1s infinite alternate;
+}
+
+@keyframes flame{
+    from{ transform:translateY(10px); opacity:0.6; }
+    to{ transform:translateY(-10px); opacity:1; }
+}
+
+/* ================= BIRU ================= */
+.biru{
+    background:linear-gradient(180deg,#001a3a,#00aaff);
+    box-shadow:0 0 40px cyan;
+}
+
+/* ================= TEXT ================= */
+.judul-merah{
+    color:yellow;
+    text-shadow:0 0 15px orange;
+}
+
+.judul-biru{
+    color:white;
+    text-shadow:0 0 15px cyan;
+}
+
+ul{
+    list-style:none;
+    padding:0;
+    line-height:2;
+}
+
+ul li{
+    transition:0.3s;
+}
+
+ul li:hover{
+    text-shadow:0 0 15px white;
+    transform:scale(1.05);
+}
+
+/* ================= WHATSAPP ================= */
+.wa{
+    margin:60px;
     font-size:20px;
 }
-
-.tiktok a{
-    color:white;
-    text-decoration:none;
-}
-
-.tiktok a:hover{
-    color:lime;
-}
-
-/* BOX HARGA */
-.box{
-    margin:40px auto;
-    width:80%;
-    max-width:600px;
-    background:#111;
-    padding:25px;
-    border-radius:15px;
-    box-shadow:0 0 20px lime;
-    text-align:left;
-}
-
-h2{
-    color:lime;
-    text-align:center;
-}
 </style>
+
 </head>
 
 <body>
 
+<!-- NAVBAR -->
+<nav>
+<a href="#">HOME</a>
+<a href="#paket">PAKET</a>
+<a href="#order">ORDER</a>
+</nav>
+
 <h1>Selamat datang di Ramdyyyy019 Optimmaize</h1>
 
-<div class="tiktok">
+<div class="social">
 <a href="https://www.tiktok.com/@rmdyyyyyy?_r=1&_t=ZS-93yD2jkVZ56" target="_blank">
-🎵 Klik Logo TikTok → Profil Gue
+<img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png">
 </a>
 </div>
 
-<div class="box">
-<h2>💰 PAKET UTAMA</h2>
+<!-- ================= PAKET UTAMA ================= -->
+<div class="box api" id="paket">
+<h2 class="judul-merah">🔥 PAKET UTAMA 🔥</h2>
 
-<p><b>30K VIA REMOTE</b></p>
+<p><b>💰 30K VIA REMOTE</b></p>
 <p><b>20K VIA VIDEO FULL TUTORIAL</b></p>
 
 <ul>
 <li>⚡ KEY MEP</li>
 <li>⚡ HUD</li>
-<li>⚡ FPS JADI TINGGI (tergantung spek PC / laptop)</li>
-<li>⚡ VIA REMOTE — duduk santuy aja</li>
-<li>⚡ Windows jadi enteng</li>
-<li>⚡ RAM jadi optim</li>
-<li>⚡ CPU proses jadi enteng</li>
-<li>⚡ Dikasih BS / MSI oprek by gue</li>
+<li>⚡ FPS tinggi (tergantung spek)</li>
+<li>⚡ Via remote duduk santuy</li>
+<li>⚡ Windows enteng</li>
+<li>⚡ RAM optim</li>
+<li>⚡ CPU ringan</li>
+<li>⚡ BS / MSI oprek by gue</li>
 <li>⚡ Proses 10–15 menit</li>
-<li>⚡ Main jadi halus / shmooth</li>
-<li>⚡ Tidak membuat crash / corrupt Windows</li>
-<li>⚡ Support Windows 10 – 11</li>
-<li>⚡ Free reg gue</li>
+<li>⚡ Gameplay halus shmooth</li>
+<li>⚡ No crash / corrupt</li>
+<li>⚡ Win 10 – 11</li>
+<li>⚡ Free reg</li>
 <li>⚡ Free FF V7A</li>
 </ul>
 </div>
 
-<div class="box">
-<h2>🛡 PAKET 15K — GRAFIK MC PC / LAPTOP</h2>
+<!-- ================= PAKET 15K ================= -->
+<div class="box biru">
+<h2 class="judul-biru">🛡 PAKET 15K 🛡</h2>
+
+<p><b>Grafik MC PC / Laptop</b></p>
 
 <ul>
 <li>🛡 Dapet FF V7A</li>
@@ -97,6 +191,15 @@ h2{
 </ul>
 
 <p><b>(via remote langsung PM aja lek)</b></p>
+</div>
+
+<!-- ================= ORDER ================= -->
+<div class="wa" id="order">
+<a href="https://wa.me/6285880746141" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" width="50">
+<br>
+Order ke WA
+</a>
 </div>
 
 </body>
